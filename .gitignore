@@ -1,0 +1,24 @@
+
+
+# Optional npm cache directory
+.npm
+# Dependency directories
+/node_modules
+
+# dotenv environment variables file(s)
+.env
+.env.*
+
+#Build generated
+dist/
+build/
+stats.json
+
+
+### VisualStudioCode ###
+.vscode/*
+
+
+### System Files ###
+.DS_Store
+
