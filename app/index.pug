@@ -1,11 +1,8 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Documents
-  body
-    main
-      h1.text-primary 
-        | Test Bootstrap
+include includes/_head.pug
+body
+  include includes/_header.pug
+  main
+    include includes/_top-menu.pug
+    include includes/_banner.pug
+    include includes/_navigation.pug
+  include includes/_footer.pug

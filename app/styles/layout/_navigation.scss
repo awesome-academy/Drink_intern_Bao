@@ -1,0 +1,23 @@
+.navigation {
+    background-color: var(--color-black);
+    padding: 2rem 0;
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        // font-family: var(--navigation-font);
+        color: var(--color-white);
+        padding: 3rem;
+        transition: all 0.2s;
+        &:hover {
+            color: var(--color-highlight);
+            text-decoration: none;
+        }
+    }
+}

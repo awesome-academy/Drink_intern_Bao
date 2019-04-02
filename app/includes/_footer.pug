@@ -1,0 +1,69 @@
+section.brand-logos
+    .container
+        .row.border-bottom
+            .col-lg-4.border-right
+                img.brand-logos__image(src="images/brand-logos/brand-01.jpg", alt="brand 01")
+            .col-lg-4.border-right
+                img.brand-logos__image(src="images/brand-logos/brand-02.jpg", alt="brand 01")
+            .col-lg-4
+                img.brand-logos__image(src="images/brand-logos/brand-03.jpg", alt="brand 01")
+footer.footer
+    .container
+        .row
+            .col-md-6.col-lg-2
+                h3.heading-tertiary  Thông tin
+                ul.footer__list
+                    - var infoList =['về chúng tôi','giao hàng','cảm nghĩ','lưu trữ','chính sách riêng tư']
+                        each item in infoList
+                            li.footer__item
+                                a.footer__link(href='#')= item
+            .col-md-6.col-lg-2
+                h3.heading-tertiary  Mua hàng
+                ul.footer__list
+                    - var orderList =['vận chuyển và tra hàng','mua hàng an toàn','vận quốc tế','liên kết','dịch vụ giảm giá']
+                        each item in orderList
+                            li.footer__item
+                                a.footer__link(href='#')= item
+            .col-md-6.col-lg-4
+                h3.heading-tertiary  Gửi email
+                p.footer__email-text Gửi email cho chúng tôi để được hổ trợ
+                
+                input.footer__mail-input(type='text', name='sendmail', placeholder='Enter your email')
+                //- img(src="image/footer_send.png", alt="")
+                a.footer__arrow-button(href="#") Gửi
+                .footer__list.footer__list--icon
+                    a.footer__icon(href='#')
+                        i.fas.fa-dove
+                    a.footer__icon(href='#')
+                        i.fab.fa-google-plus-g
+                    a.footer__icon(href='#')
+                        i.fas.fa-volleyball-ball
+                    a.footer__icon(href='#')
+                        i.fab.fa-invision
+                    a.footer__icon(href='#')
+                        i.fas.fa-wifi
+            .col-md-6.col-lg-4
+                h3.heading-tertiary Liên hệ
+                .footer__contact
+                    p
+                        i.fas.fa-map-marker-alt 
+                        span Tầng 4, Tòa nhà Hanoi Group  Số 442 Đội Cấn, P. Cống Vị, Q. Ba Đình, Hà Nội
+                    p 
+                        i.fas.fa-phone-volume 
+                        span (04) 6674 2332 -    
+                        i.fas.fa-phone-volume 
+                        span (04) 37868904
+                    p
+                        i.fas.fa-phone-volume 
+                        span (08) 6608 9686      
+                    
+                    p
+                        i.fas.fa-envelope
+                        span 
+                            a(href='#') Support@bizweb.vn
+    .container
+        .row.border-top.p-3
+            .col-lg-6
+                p.footer__copyright-text &copy CoppyRight 2018-2014 DKT Technology JSC
+            .col-lg-6
+                img.footer__under-logos(src="images/footer_logos.png", alt="")        
