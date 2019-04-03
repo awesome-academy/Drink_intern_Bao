@@ -1,0 +1,15 @@
+nav.navigation
+    .container
+        .row
+            .col-lg-2
+                .navigation__logo
+                    img(src="images/logo.png", alt="")
+                    
+            .col-lg-10
+                ul.navigation__list
+                    li.navigation__item
+                        a.navigation__link(href="index.html") Trang chủ
+                    -var list= [{link:'#',text:'Rượu vang trắng'},{link:'#',text:'Champagne'},{link:'about.html',text:'Thông tin'},{link:'blog.html',text: 'Blog'},{link:'contact.html',text: 'Liên hệ'}]
+                        each val in list
+                            li.navigation__item
+                                a.navigation__link(href=val.link)= val.text

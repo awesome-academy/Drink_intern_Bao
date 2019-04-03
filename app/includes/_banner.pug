@@ -1,0 +1,19 @@
+section.banner
+    #bannerCarousel.carousel.slide(data-ride='carousel', data-interval='false')
+        .banner__overlay
+            h1.heading-primary
+                span.heading-primary--main Rượu
+                span.heading-primary--sub Vang Đỏ 
+                span.heading-primary--muted Since 1980 
+        ol.carousel-indicators
+            li.active(data-target='#bannerCarousel', data-slide-to='0')
+            li(data-target='#bannerCarousel', data-slide-to='1')
+            li(data-target='#bannerCarousel', data-slide-to='2')
+        .carousel-inner
+            .carousel-item.active
+                img.d-block.w-100(src='images/slides/slide-1.jpg', alt='First slide')
+            .carousel-item
+                img.d-block.w-100(src='images/slides/slide-2.jpg', alt='Second slide')
+            .carousel-item
+                img.d-block.w-100(src='images/slides/slide-3.jpg', alt='Third slide')
+        

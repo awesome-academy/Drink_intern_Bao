@@ -1,0 +1,14 @@
+.top-menu
+    .container
+        .row
+            .col-lg-8     
+                .menu
+                    ul.menu__list
+                        -var list= [{link:'#',text:'Tài khoản của tôi'},{link:'#',text:'Trạng thái đơn hàng'},{link:'#',text:'Danh sách ưa thích'},{link:'#',text:'Giỏ hàng'},{link:'#',text:'Đăng nhập'},{link:'#',text: 'Đăng ký'}]
+                            each val in list
+                                li.menu__item
+                                    a.menu__link(href=val.link)= val.text
+            .col-lg-4
+                .search-box
+                    input.search-box__input(type='text', name='search',placeholder='Tìm kiếm ở đây ...')
+                    i.fas.fa-search.text-white.search-box__icon

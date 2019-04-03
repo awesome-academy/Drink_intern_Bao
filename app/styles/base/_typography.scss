@@ -1,0 +1,67 @@
+/*------------------------------------*/
+/* FONT FACE */
+/*------------------------------------*/
+@font-face {
+    font-family: 'roboto';
+    src: url('../../fonts/roboto/Roboto-Thin.ttf');
+}
+@font-face {
+    font-family: 'UTM-Alpine-KT';
+    src: url('../../fonts/UTM/UTM-Alpine-KT.ttf');
+}
+@font-face {
+    font-family: 'UTM-Aquarelle';
+    src: url('../../fonts/UTM/UTM-Aquarelle.ttf');
+}
+@font-face {
+    font-family: 'UTM-Caviar';
+    src: url('../../fonts/UTM/UTM-Caviar.ttf');
+}
+@font-face {
+    font-family: 'Lobster';
+    src: url('../../fonts/lobster/Lobster-1.4.ttf');
+}
+@font-face {
+    font-family: 'UVFDidot';
+    src: url('../../fonts/UVFDiDot/UVF-Didot.ttf');
+}
+@font-face {
+    font-family: 'UVFAphroditePro';
+    src: url('../../fonts/UVFDiDot/UVF-Aphrodite-Pro.ttf');
+}
+@font-face {
+    font-family: 'UVFBlendaScript';
+    src: url('../../fonts/UVFDiDot/UVF-Blenda-Script.ttf');
+}
+
+/*------------------------------------*/
+/* TYPOGRAPHY */
+/*------------------------------------*/
+.heading-primary {
+    display: block;
+    color: var(--color-white-alpha-2);
+    position: relative;
+    width: 100%;
+    text-align: center;
+    &--main {
+        font-size: 30rem;
+        font-family: var(--heading-main-font);
+    }
+    &--sub {
+        font-size: 8rem;
+        font-family: var(--heading-sub-font);
+        position: absolute;
+        top: 15%;
+        left: 45%;
+    }
+    &--muted {
+        margin-left: 2rem;
+        font-size: 4rem;
+        font-family: var(--heading-muted-font);
+    }
+}
+.heading-tertiary {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
