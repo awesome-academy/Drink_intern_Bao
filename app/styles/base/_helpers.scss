@@ -1,0 +1,11 @@
+.h-toogle-nav-show {
+    display: flex !important;
+}
+.h-read-more-link {
+    display: block;
+    font-size: 1.3rem;
+    @include respond(tab-port) {
+        font-size: 1.5rem;
+    }
+    color: var(--color-grey-light-2);
+}

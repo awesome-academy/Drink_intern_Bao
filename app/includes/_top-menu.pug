@@ -1,14 +1,20 @@
 .top-menu
+    .container.d-flex
+        .top-menu__brand
+            | Wine house 
+        .top-menu__toggle.menu__link
+            i.fas.fa-bars 
     .container
+        
         .row
-            .col-lg-8     
+            .col-md-8.col-lg-8     
                 .menu
-                    ul.menu__list
+                    .menu__list
                         -var list= [{link:'#',text:'Tài khoản của tôi'},{link:'#',text:'Trạng thái đơn hàng'},{link:'#',text:'Danh sách ưa thích'},{link:'#',text:'Giỏ hàng'},{link:'#',text:'Đăng nhập'},{link:'#',text: 'Đăng ký'}]
                             each val in list
-                                li.menu__item
+                                .menu__item
                                     a.menu__link(href=val.link)= val.text
-            .col-lg-4
+            .col-md-4.col-lg-4
                 .search-box
                     input.search-box__input(type='text', name='search',placeholder='Tìm kiếm ở đây ...')
                     i.fas.fa-search.text-white.search-box__icon

@@ -1,0 +1,35 @@
+.article {
+    width: 100%;
+
+    @include respond(tab-port) {
+        width: 80%;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    &__thumbnail {
+        width: 100%;
+    }
+    &__meta {
+        font-size: 1.2rem;
+        @include respond(tab-port) {
+            font-size: 1.5rem;
+        }
+        color: var(--color-grey-light-2);
+        span:not(:last-child) {
+            &::after {
+                content: '|';
+                margin: 0 0.5rem;
+            }
+        }
+        &--date {
+            text-transform: uppercase;
+        }
+    }
+    &__description {
+        font-size: 1.4rem;
+        @include respond(tab-port) {
+            font-size: 1.8rem;
+        }
+        color: var(--color-grey-dark-2);
+    }
+}

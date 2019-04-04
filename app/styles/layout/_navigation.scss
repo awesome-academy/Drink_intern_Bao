@@ -1,19 +1,20 @@
 .navigation {
     background-color: var(--color-black);
     padding: 2rem 0;
+
     &__list {
         list-style: none;
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 100%;
+        padding: 0 1rem;
     }
     &__link {
         text-decoration: none;
         text-transform: uppercase;
-        // font-family: var(--navigation-font);
         color: var(--color-white);
-        padding: 3rem;
+        padding: 2rem 0;
         transition: all 0.2s;
         &:hover {
             color: var(--color-highlight);

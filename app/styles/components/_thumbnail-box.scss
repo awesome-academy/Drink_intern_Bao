@@ -1,0 +1,92 @@
+.thumbnail-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    @include respond(tab-port) {
+        height: 35rem;
+    }
+
+    &__image {
+        display: block;
+        margin: 0 auto;
+        padding: 1rem;
+        height: 100%;
+        &--big {
+            width: 90%;
+            height: 100%;
+            padding: 2rem;
+            @include respond(tab-port) {
+                width: 35%;
+            }
+        }
+    }
+    &__shape {
+        position: absolute;
+        width: 35%;
+        background: linear-gradient(
+            135deg,
+            rgba(230, 174, 72, 1) 50%,
+            rgba(0, 0, 0, 0) 50%,
+            rgba(0, 0, 0, 0) 100%
+        );
+        z-index: 3;
+        height: 22%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        &--big {
+            width: 40%;
+            height: 24%;
+            font-size: 2rem;
+            @include respond(tab-port) {
+                width: 18%;
+            }
+        }
+        &--new {
+            background: linear-gradient(
+                135deg,
+                var(--color-green) 50%,
+                rgba(0, 0, 0, 0) 50%,
+                rgba(0, 0, 0, 0) 100%
+            );
+        }
+        &--hot {
+            background: linear-gradient(
+                135deg,
+                var(--color-red) 50%,
+                rgba(0, 0, 0, 0) 50%,
+                rgba(0, 0, 0, 0) 100%
+            );
+        }
+    }
+    &__tag {
+        transform: rotate(-45deg);
+        display: block;
+        padding-bottom: 4rem;
+        color: var(--color-white);
+        font-weight: bold;
+        @include respond(phone) {
+            padding-bottom: 2rem;
+        }
+    }
+    &__image-wrap {
+        width: 100%;
+        height: 25rem;
+        position: relative;
+    }
+    &__menu {
+        width: 100%;
+        background-color: #000;
+        padding: 0.5rem;
+        display: none;
+        justify-content: space-around;
+        margin-top: -3rem;
+        position: absolute;
+        bottom: 0;
+    }
+    &__menu-link {
+        font-size: 1.3rem;
+        color: var(--color-white);
+    }
+}

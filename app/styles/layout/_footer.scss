@@ -1,18 +1,31 @@
 .brand-logos {
+    text-align: center;
     &__image {
         display: block;
         width: 50%;
         padding: 3rem;
         margin: 0 auto;
+        @include respond(tab);
     }
 }
 .footer {
     padding-top: 5rem;
+    @include respond(phone) {
+        text-align: center;
+    }
     &__list {
         list-style: none;
         &--icon {
             margin-top: 2rem;
             display: flex;
+            @include respond(phone) {
+                justify-content: center;
+            }
+        }
+    }
+    &__item {
+        @include respond(phone) {
+            padding: 1rem;
         }
     }
     &__icon {

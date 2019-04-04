@@ -1,0 +1,112 @@
+.image-overlay {
+    @include centerFlexItems;
+    position: absolute;
+    top: 0;
+    border: 0;
+    background: transparent;
+    transition: 0.4s all;
+    width: 100%;
+    height: 100%;
+    &__line-box {
+        position: relative;
+    }
+    &__line-box::before {
+        content: '';
+        position: absolute;
+        width: 0%;
+        @include respond(tab-land) {
+            width: 100%;
+        }
+        left: 0;
+        top: 20%;
+        height: 1px;
+        background-color: white;
+        transition: all 0.5s ease-in-out;
+    }
+    &__line-box::after {
+        content: '';
+        position: absolute;
+        width: 0%;
+        @include respond(tab-land) {
+            width: 100%;
+        }
+        left: 0;
+        bottom: 20%;
+        height: 1px;
+        background-color: white;
+        transition: all 0.5s ease-in-out;
+    }
+    &__title {
+        color: var(--color-white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: 0.2s all;
+        visibility: hidden;
+        @include respond(tab-land) {
+            visibility: visible;
+        }
+        &--main {
+            position: relative;
+            font-size: 4.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            padding: 0.5rem 1.5rem;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 1px;
+                right: 5%;
+                top: -10%;
+                height: 0%;
+                @include respond(tab-land) {
+                    height: 110%;
+                }
+                background-color: white;
+                transition: all 0.5s ease-in-out;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                width: 1px;
+                left: 5%;
+                top: -10%;
+                height: 0%;
+                @include respond(tab-land) {
+                    height: 110%;
+                }
+                background-color: white;
+                transition: all 0.5s ease-in-out;
+            }
+        }
+        &--sub {
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+    }
+    &:hover {
+        background: radial-gradient(
+            circle,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.32) 100%
+        );
+    }
+
+    &:hover &__title {
+        visibility: visible;
+    }
+    &:hover .image-overlay__title--main::before {
+        height: 110%;
+    }
+    &:hover .image-overlay__title--main::after {
+        height: 110%;
+    }
+    &:hover .image-overlay__line-box::before {
+        width: 100%;
+    }
+    &:hover .image-overlay__line-box::after {
+        width: 100%;
+    }
+}
