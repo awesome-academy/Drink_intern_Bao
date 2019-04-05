@@ -1,0 +1,39 @@
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10rem;
+    @include respond(tab-land) {
+        width: 70%;
+        margin: 10rem auto;
+    }
+    &__icon {
+        background-color: var(--color-highlight);
+        border-radius: 50%;
+        padding: 2rem 2.5rem;
+        color: var(--color-white);
+    }
+    &__description {
+        font-size: 1.3rem;
+        color: var(--color-grey-dark-1);
+        text-align: center;
+        padding: 2rem 0;
+    }
+    &__author {
+        display: block;
+        &--name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--color-grey-dark-2);
+        }
+        &--role {
+            font-size: 1.2rem;
+            color: var(--color-grey-light-2);
+        }
+    }
+
+    // Custom Carousel-Indicators
+    .carousel-indicators li {
+        color: var(--color-grey-dark-2);
+    }
+}

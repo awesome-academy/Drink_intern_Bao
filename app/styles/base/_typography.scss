@@ -43,9 +43,16 @@
     position: relative;
     width: 100%;
     text-align: center;
+    margin-top: 10rem;
     &--main {
-        font-size: 30rem;
+        font-size: 25rem;
         font-family: var(--heading-main-font);
+        @include respond(tab-port) {
+            font-size: 20rem;
+        }
+        @include respond(phone) {
+            font-size: 13rem;
+        }
     }
     &--sub {
         font-size: 8rem;
@@ -53,15 +60,80 @@
         position: absolute;
         top: 15%;
         left: 45%;
+        @include respond(tab-port) {
+            font-size: 6rem;
+        }
+        @include respond(phone) {
+            font-size: 4rem;
+        }
     }
     &--muted {
         margin-left: 2rem;
         font-size: 4rem;
         font-family: var(--heading-muted-font);
+        @include respond(tab-port) {
+            font-size: 3rem;
+        }
+        @include respond(phone) {
+            font-size: 2rem;
+        }
+    }
+}
+.heading-secondary {
+    display: block;
+    text-align: center;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    &::after {
+        content: '';
+        display: block;
+        height: 2rem;
+        width: 90%;
+        margin: 0 auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../../images/heading-second-pattern.png');
+    }
+    &--pattern-left {
+        text-align: left;
+        &::after {
+            margin: 0;
+            width: 15%;
+            height: 3rem;
+            background-size: contain;
+            background-position: center;
+            background-image: url('../../images/heading-second-pattern-left.png');
+        }
     }
 }
 .heading-tertiary {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    @include respond(tab-port) {
+        font-size: 2rem;
+    }
     text-transform: uppercase;
-    letter-spacing: 2px;
+}
+.number-highlight {
+    font-size: 3rem;
+
+    font-family: var(--price-font);
+    color: var(--color-highlight);
+    text-transform: uppercase;
+
+    &__sub {
+        text-transform: lowercase;
+    }
+    &--small {
+        font-size: 2rem;
+    }
+    &--under {
+        font-size: 1.3rem;
+        font-family: var(--default-font);
+    }
+    &--muted {
+        font-size: 1.5rem;
+        color: var(--color-grey-dark-1);
+        text-decoration: line-through;
+    }
 }

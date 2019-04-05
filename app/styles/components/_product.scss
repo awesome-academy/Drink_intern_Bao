@@ -1,0 +1,20 @@
+.product {
+    width: 100%;
+    padding: 1rem;
+    transition: 0.2 all;
+    @include respond(phone) {
+        padding: 3rem;
+    }
+    &:hover {
+        .heading-tertiary {
+            color: var(--color-highlight);
+        }
+        .btn-primary {
+            background-color: var(--color-highlight);
+            border: 0;
+        }
+        .thumbnail-box__menu {
+            display: flex;
+        }
+    }
+}

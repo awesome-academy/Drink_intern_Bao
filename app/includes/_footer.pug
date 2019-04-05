@@ -1,30 +1,30 @@
 section.brand-logos
     .container
-        .row.border-bottom
-            .col-lg-4.border-right
+        .row.border-bottom.d-flex.justify-content-center
+            .col-md-6.col-lg-4.border
                 img.brand-logos__image(src="images/brand-logos/brand-01.jpg", alt="brand 01")
-            .col-lg-4.border-right
+            .col-md-6.col-lg-4.border
                 img.brand-logos__image(src="images/brand-logos/brand-02.jpg", alt="brand 01")
-            .col-lg-4
+            .col-md-6.col-lg-4.border
                 img.brand-logos__image(src="images/brand-logos/brand-03.jpg", alt="brand 01")
 footer.footer
     .container
         .row
-            .col-md-6.col-lg-2
+            .col-sm-6.col-lg-2.p-1
                 h3.heading-tertiary  Thông tin
                 ul.footer__list
                     - var infoList =['về chúng tôi','giao hàng','cảm nghĩ','lưu trữ','chính sách riêng tư']
                         each item in infoList
                             li.footer__item
                                 a.footer__link(href='#')= item
-            .col-md-6.col-lg-2
+            .col-sm-6.col-lg-2.p-1
                 h3.heading-tertiary  Mua hàng
                 ul.footer__list
                     - var orderList =['vận chuyển và tra hàng','mua hàng an toàn','vận quốc tế','liên kết','dịch vụ giảm giá']
                         each item in orderList
                             li.footer__item
                                 a.footer__link(href='#')= item
-            .col-md-6.col-lg-4
+            .col-sm-6.col-lg-4.p-1
                 h3.heading-tertiary  Gửi email
                 p.footer__email-text Gửi email cho chúng tôi để được hổ trợ
                 
@@ -42,7 +42,7 @@ footer.footer
                         i.fab.fa-invision
                     a.footer__icon(href='#')
                         i.fas.fa-wifi
-            .col-md-6.col-lg-4
+            .col-sm-6.col-lg-4.p-1
                 h3.heading-tertiary Liên hệ
                 .footer__contact
                     p

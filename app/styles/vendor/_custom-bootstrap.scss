@@ -1,0 +1,12 @@
+$theme-colors: (
+    'primary': #000,
+    'secondary': #e6ae48
+);
+@import '~bootstrap/scss/bootstrap';
+
+.btn {
+    border-radius: 0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 0.375rem 1.2rem;
+}

@@ -15,3 +15,37 @@
     -ms-flex-align: center;
     align-items: center;
 }
+
+/*------------------------------------*/
+/* MEDIA QUERIES MIXINS  */
+/*------------------------------------*/
+
+/*
+	FROM--------------------TO-------------------DEVICES
+	0px                   	600px				 Phone
+	600px				    900px					Tablet Portrait
+	900px				    1200px					Tablet Landscape
+	1200px				    1800px					*Current Style Applying
+	1800px 				    >1800px					Big Desktops
+*/
+// TODOS: Update comment
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == big-desktop {
+        @media (min-width: 75em) {
+            @content;
+        }
+    } @else {
+        $maxWidth: map-get(
+            (
+                phone: 36em,
+                tab-port: 48em,
+                tab-land: 62em
+            ),
+            $breakpoint
+        );
+        @media (max-width: $maxWidth) {
+            @content;
+        }
+    }
+}
