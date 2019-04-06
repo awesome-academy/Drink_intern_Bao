@@ -1,0 +1,11 @@
+.cart-list {
+    padding: 5rem 0;
+    .cart-list__table {
+        padding: 2rem 1rem;
+        background-color: #fafafa;
+    }
+    .cart-list__buttons {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

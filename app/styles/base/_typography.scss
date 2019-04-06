@@ -85,6 +85,9 @@
     font-size: 2.2rem;
     text-transform: uppercase;
     letter-spacing: 1.8px;
+    &--small {
+        font-size: 1.8rem;
+    }
     &::after {
         content: '';
         display: block;
@@ -99,7 +102,7 @@
         text-align: left;
         &::after {
             margin: 0;
-            width: 15%;
+            width: 7rem;
             height: 3rem;
             background-size: contain;
             background-position: center;
@@ -109,6 +112,9 @@
 }
 .heading-tertiary {
     font-size: 1.5rem;
+    &--small {
+        font-size: 1.3rem;
+    }
     @include respond(tab-port) {
         font-size: 2rem;
     }

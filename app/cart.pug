@@ -1,0 +1,56 @@
+include includes/_head.pug
+
+body
+    header 
+        include includes/_top-menu.pug
+        +top-menu(true)
+    main
+        include includes/_navigation.pug
+        section.cart-list
+            .container
+                .breadcrumb
+                    a.breadcrumb__link(href="index.html") 
+                        | Trang chủ
+                    a.breadcrumb__link(href="index.html") 
+                        | Sản phẩm
+                    a.breadcrumb__link.breadcrumb__link--active(href="index.html") 
+                        | Rượu vang đỏ
+                h2.heading-secondary.heading-secondary--pattern-left Giỏ hàng
+                table.table.cart-list__table
+                    thead
+                        tr
+                            th(scope='col') 
+                                h3.heading-tertiary Ảnh  
+                            th(scope='col') 
+                                h3.heading-tertiary Tên Sản Phẩm   
+                            th(scope='col') 
+                                h3.heading-tertiary Giá   
+                            th(scope='col') 
+                                h3.heading-tertiary Số lượng  
+                            th(scope='col') 
+                                h3.heading-tertiary Tổng số  
+                            th(scope='col') 
+                                h3.heading-tertiary Xoá   
+                    tbody
+                        - for (var x = 0; x < 4; x++)
+                            tr
+                                td
+                                    img.d-block.w-100(src="images/products/detailproduct_1.png")
+                                td
+                                    p.text-uppercase Rượu Vang đỏ 
+                                td 
+                                    p.number-highlight.number-highlight--small 345.000
+                                        sup.number-highlight__sub đ
+                                td
+                                    span 1
+                                td
+                                    p.number-highlight.number-highlight--small 345.000
+                                        sup.number-highlight__sub đ
+
+                                td  
+                                    i.fas.fa-trash.alt
+                .cart-list__buttons
+                    button.btn.btn-primary tiếp tục mua hàng
+                    button.btn.btn-primary Xóa
+                    button.btn.btn-primary cập nhật
+    include includes/_footer.pug

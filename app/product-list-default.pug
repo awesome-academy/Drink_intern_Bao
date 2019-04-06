@@ -53,28 +53,34 @@ body
                             a.product-list__link(href="#")= val
                         a.product-list__link.product-list__link--active(href="#") 5
                         i.fas.fa-caret-right
-                .product-list__list
-                     - var list= ["hotproduct_4.png","hotproduct_3.png","hotproduct_4.png","hotproduct_3.png","hotproduct_4.png","hotproduct_3.png","hotproduct_4.png","hotproduct_3.png","hotproduct_1.png"]
+                .product-list__list.product-list__list--default
+                     - var list= ["hotproduct_4.png","hotproduct_3.png","hotproduct_4.png","hotproduct_3.png"]
                             each url in list
-                                .product.product--hover-effect
-                                    .thumbnail-box
-                                        .thumbnail-box__image-wrap
-                                            img.thumbnail-box__image(src="images/products/" + url, alt="hotdeal")
-                                            .thumbnail-box__menu
-                                                a.thumbnail-box__menu-link(href="#") 
-                                                    i.fas.fa-heart
-                                                    |Yêu thích
-                                                a.thumbnail-box__menu-link(href="#") 
-                                                    i.fas.fa-chart-bar
-                                                    |So sánh
-              
-                                        h3.heading-tertiary.pt-4 Rượu vang Đà Lạt
-                                        p.number-highlight.number-highlight--small.my-1  370.000
-                                            sup.number-highlight__sub đ 
-                                            span.number-highlight--muted 450.000
-                                                sup.number-highlight__sub đ 
-                                        
-                                        button.btn.btn-primary.my-1 add to cart 
+                                .product
+                                    .product-box
+                                        .row
+                                            .col-md-4
+                                                .product-box__image-wrap
+                                                    img.product-box__image(src="images/products/" + url, alt="hotdeal")
+                                            .col-md-8
+                                                h3.heading-tertiary.product-box__title.pt-4 Rượu nho năm 1977
+                                                p.number-highlight.my-1  370.000
+                                                    sup.number-highlight__sub đ 
+            
+                                                .product-box__description
+                                                    | Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ oxy hóa của protein béo.
+
+                                                .product-box__menu
+                                                    button.btn.btn-primary.my-1 add to cart 
+                                                    a.product-box__menu-link(href="#") 
+                                                        i.fas.fa-heart
+                                                        |Yêu thích
+                                                    a.product-box__menu-link(href="#") 
+                                                        i.fas.fa-chart-bar
+                                                        |So sánh
+                                    hr                   
+                                    
+                                    
                             
         
           

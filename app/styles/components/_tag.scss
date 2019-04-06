@@ -1,0 +1,18 @@
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.tag {
+    padding: 0.2rem 0.7rem;
+    border: 1px solid var(--color-grey-light-1);
+    margin-bottom: 1rem;
+    &:not(:last-child) {
+        margin-right: 1rem;
+    }
+    &--active {
+        color: var(--color-white);
+        background-color: var(--color-highlight);
+    }
+    color: var(--color-grey-dark-1);
+    text-decoration: none;
+}
