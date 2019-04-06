@@ -1,7 +1,11 @@
 .navigation {
     background-color: var(--color-black);
     padding: 2rem 0;
-
+    transition: display 0.5s;
+    height: 15.5rem;
+    @include respond(tab-port) {
+        height: auto;
+    }
     &__list {
         list-style: none;
         display: flex;
@@ -16,9 +20,67 @@
         color: var(--color-white);
         padding: 2rem 0;
         transition: all 0.2s;
+        font-size: 1.4rem;
+        @include respond(tab-land) {
+            font-size: 1.2rem;
+        }
         &:hover {
             color: var(--color-highlight);
             text-decoration: none;
         }
+        &--sub {
+            font-size: 1.2rem;
+            text-transform: initial;
+            color: var(--color-black);
+            padding: 0.5rem;
+        }
+    }
+    &__dropable-item {
+        position: static;
+        height: 2.5rem;
+    }
+    &__mega-menu {
+        background: var(--color-white);
+        // display: none;
+        left: 2%;
+        position: absolute;
+        z-index: 1005;
+        text-align: left;
+        width: 95%;
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+        padding: 2rem;
+        justify-content: space-between;
+        border: 2px solid var(--color-highlight);
+        border-top: 0;
+        transition: all 0.2s;
+    }
+    &__arrow-top {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        width: 1rem;
+        height: 2rem;
+        font-size: 2.2rem;
+        margin: 5.4rem auto 0;
+        color: var(--color-highlight);
+    }
+    &__sub-menu {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        @include respond(tab-land) {
+            flex: 1 0 20%;
+        }
+    }
+    // HOVER DROPDOWN FUNCTIONALITIES
+    &__dropable-item:hover &__mega-menu {
+        opacity: 1;
+        visibility: visible;
+    }
+    &__dropable-item:hover &__arrow-top {
+        opacity: 1;
+        visibility: visible;
     }
 }

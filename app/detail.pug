@@ -1,0 +1,198 @@
+include includes/_head.pug
+
+body
+    header 
+        include includes/_top-menu.pug
+        +top-menu(true)
+    main
+        include includes/_navigation.pug
+       
+        section.container
+            .breadcrumb
+                a.breadcrumb__link(href="index.html") 
+                    | Trang chủ
+                a.breadcrumb__link(href="index.html") 
+                        | Sản phẩm
+                a.breadcrumb__link.breadcrumb__link--active(href="index.html") 
+                    | Rượu vang đỏ
+            .row.pb-5
+                .col-lg-6
+                    .row.detail-images
+                        .col-md-2.h-right-border.d-none.d-md-block
+                            .detail-images__list
+                                .detail-images__item
+                                    i.fas.fa-arrow-up
+                                - var list =['hotproduct_1.png','hotproduct_1.png','hotproduct_1.png','hotproduct_3.png','hotproduct_1.png']
+                                    each item in list
+                                        .detail-images__item
+                                            img.detail-images__image(src='images/products/' + item, alt="")
+        
+                                .detail-images__item
+                                    i.fas.fa-arrow-down
+                        .col-md-10
+                            .detail-images__image-box
+                                img.detail-images__main-image(src="images/products/detailblog_box.png", alt="")
+                .col-lg-6
+                    .product
+                        h1.heading-secondary.heading-secondary--pattern-left rượu nho năm 1987
+                        p.number-highlight.my-2  330.000
+                        hr
+                        .product__stars-review
+                            .product__stars-review--stars
+                                - for (var x = 0; x < 4; x++)
+                                    i.fas.fa-star
+                                i.fas.fa-star-half-alt 
+                            .product__stars-review--content
+                            | 1 Review(S) | Add Your Review
+                        hr
+                        
+                        h3.heading-tertiary.my-4 Màu sắc
+                    
+                        a(href="#").product__colors.product__colors--yellow 
+                        a(href="#").product__colors.product__colors--black 
+                        a(href="#").product__colors.product__colors--red 
+
+                        h3.heading-tertiary.my-4 Kích cỡ
+                        .form-group
+                            select#size.form-control.product__size-select
+                                option Loại to
+                                option Loại vừa
+                                option Loại nhỏ
+                        h3.heading-tertiary.my-4 số lượng 
+                        .product__quantity-select
+                            .product__quantity-box
+                                button -
+                                span 3 
+                                button +
+                            button.btn.btn-primary Add to card 
+                        .d-block.py-3
+                            a.product__link(href="#")
+                                i.fas.fa-heart 
+                                | Yêu thích 
+                            a.product__link(href="#")
+                                i.fas.fa-signal 
+                                | So sánh
+                            a.product__link(href="#")
+                                i.fas.fa-envelope 
+                                | Email
+                        h3.heading-tertiary.my-4 mô tả 
+                        .product__description 
+                            |Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ oxy hóa của protein béo.
+                    
+        section.product-info    
+            .container
+                .row
+                    .col-lg-7
+                        .product-info__tab
+                            a.product-info__link.product-info__link--active(href="#") đặc điểm nổi bật
+                            a.product-info__link(href="#") thông tin sản phẩm
+                            a.product-info__link(href="#") đánh giá
+                        .product-info__text 
+                            p.
+                                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                    .col-lg-5
+                        .product-info__image-box
+                            img.product-info__image(src="images/detail-page/staticblock_6.png", alt="")
+                            h2.product-info__image-text Rượu nho   
+        section.related-products
+            .container
+                h2.heading-secondary Sản phẩm liên quan
+                .row.p-3
+                    .col-sm-6.col-md-3
+                        .product.product--hover-effect
+                            .thumbnail-box
+                                .thumbnail-box__image-wrap
+                                    img.thumbnail-box__image(src="images/products/hotproduct_1.png", alt="hotdeal")
+                                    .thumbnail-box__menu
+                                        a.thumbnail-box__menu-link(href="#") 
+                                            i.fas.fa-heart
+                                            |Yêu thích
+                                        a.thumbnail-box__menu-link(href="#") 
+                                            i.fas.fa-chart-bar
+                                            |So sánh
+                                
+                                
+
+                                h3.heading-tertiary.pt-4 Rượu vang Đà Lạt
+                                p.number-highlight.number-highlight--small.my-1  330.000
+                                    sup.number-highlight__sub đ 
+                                    span.number-highlight--muted 450.000
+                                        sup.number-highlight__sub đ 
+                                
+                                button.btn.btn-primary.my-1 add to cart 
+                            
+                    .col-sm-6.col-md-3
+                        .product.product--hover-effect
+                            .thumbnail-box
+                                .thumbnail-box__image-wrap
+                                    img.thumbnail-box__image(src="images/products/hotproduct_2.png", alt="hotdeal")
+                                    .thumbnail-box__menu
+                                        a.thumbnail-box__menu-link(href="#") 
+                                            i.fas.fa-heart
+                                            |Yêu thích
+                                        a.thumbnail-box__menu-link(href="#") 
+                                            i.fas.fa-chart-bar
+                                            |So sánh
+                            
+
+                                h3.heading-tertiary.pt-4 Rượu vang Đà Lạt
+                                p.number-highlight.number-highlight--small.my-1  330.000
+                                    sup.number-highlight__sub đ 
+                                    span.number-highlight--muted 450.000
+                                        sup.number-highlight__sub đ 
+                                
+                                button.btn.btn-primary.my-1 add to cart 
+                                
+                    .col-sm-6.col-md-3
+                        .product.product--hover-effect
+                            .thumbnail-box
+                                .thumbnail-box__image-wrap
+                                    img.thumbnail-box__image(src="images/products/hotproduct_3.png", alt="hotdeal")
+                                    .thumbnail-box__menu
+                                        a.thumbnail-box__menu-link(href="#") 
+                                            i.fas.fa-heart
+                                            |Yêu thích
+                                        a.thumbnail-box__menu-link(href="#") 
+                                            i.fas.fa-chart-bar
+                                            |So sánh
+                            
+
+                                h3.heading-tertiary.pt-4 Rượu vang Đà Lạt
+                                p.number-highlight.number-highlight--small.my-1  330.000
+                                    sup.number-highlight__sub đ 
+                                    span.number-highlight--muted 450.000
+                                        sup.number-highlight__sub đ 
+                                
+                                button.btn.btn-primary.my-1 add to cart 
+                                
+                    .col-sm-6.col-md-3
+                        .product.product--hover-effect
+                            .thumbnail-box
+                                .thumbnail-box__image-wrap
+                                    img.thumbnail-box__image(src="images/products/hotproduct_4.png", alt="hotdeal")
+                                    .thumbnail-box__menu
+                                        a.thumbnail-box__menu-link(href="#") 
+                                            i.fas.fa-heart
+                                            |Yêu thích
+                                        a.thumbnail-box__menu-link(href="#") 
+                                            i.fas.fa-chart-bar
+                                            |So sánh
+                                
+
+                                h3.heading-tertiary.pt-4 Rượu vang Đà Lạt
+                                p.number-highlight.number-highlight--small.my-1  330.000
+                                    sup.number-highlight__sub đ 
+                                    span.number-highlight--muted 450.000
+                                        sup.number-highlight__sub đ 
+                                
+                                button.btn.btn-primary.my-1 add to cart 
+    include includes/_footer.pug

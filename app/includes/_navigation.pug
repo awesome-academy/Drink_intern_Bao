@@ -1,14 +1,27 @@
 nav.navigation
     .container
         .row
-            .col-md-4.col-lg-2.d-none.d-md-block
+            .col-md-3.col-lg-2.d-none.d-md-block
                 .navigation__logo
                     img(src="images/logo.png", alt="")
                     
-            .col-md-8.col-lg-10
+            .col-md-9.col-lg-10
                 ul.navigation__list
                     li.navigation__item
                         a.navigation__link(href="index.html") Trang chủ
+                    li.navigation__dropable-item
+                        a.navigation__link(href="index.html") Rượu vang đỏ
+                        span.navigation__arrow-top
+                            i.fas.fa-caret-up
+                        .navigation__mega-menu
+                            - for (var x = 0; x < 3; x++)
+                                .navigation__sub-menu                                        
+                                    h3.heading-tertiary Rượu ngoại
+                                    - var list=['Rượu Chivar','Hàng độc - rượu đọc đáo','Johnnie Walker','Rượu Whisky','Rượu Reni Martin','Rượu Glenmorangie']
+                                        each item in list
+                                                a.navigation__link.navigation__link--sub(href="#")= item
+                            .navigation__sub-menu
+                                img.d-block.w-100(src="images/mega.png",alt="Rượu vang")
                     -var list= [{link:'#',text:'Rượu vang trắng'},{link:'#',text:'Champagne'},{link:'about.html',text:'Thông tin'},{link:'blog.html',text: 'Blog'},{link:'contact.html',text: 'Liên hệ'}]
                         each val in list
                             li.navigation__item

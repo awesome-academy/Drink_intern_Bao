@@ -1,0 +1,17 @@
+.breadcrumb {
+    padding: 2rem 0;
+    background-color: transparent;
+    font-size: 1.3rem;
+    &__link {
+        color: var(--color-grey-light-1);
+        &--active {
+            color: var(--color-highlight);
+        }
+        &:not(:last-child) {
+            &::after {
+                content: '/';
+                margin: 0 1rem;
+            }
+        }
+    }
+}
