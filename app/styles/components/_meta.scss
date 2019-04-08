@@ -1,0 +1,10 @@
+.meta {
+    padding: 0.5rem 3rem;
+    &__icon {
+        display: inline-block;
+        margin-right: 1rem;
+    }
+    &__link {
+        color: var(--color-black);
+    }
+}

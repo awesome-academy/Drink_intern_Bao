@@ -1,0 +1,87 @@
+include includes/_head.pug
+
+body
+    header 
+        include includes/_top-menu.pug
+        +top-menu(true)
+    main
+        include includes/_navigation.pug
+        .container
+                .breadcrumb
+                    a.breadcrumb__link(href="index.html") 
+                        | Trang chủ
+                    a.breadcrumb__link.breadcrumb__link--active(href="index.html") 
+                        | Blog
+                h2.heading-secondary.heading-secondary--pattern-left Blog
+        .container 
+            section.blog-detail
+                .blog-detail__item.blog-detail__side-bar
+                    h3.heading-tertiary.heading-tertiary--small.py-2 Bài Viết Mới Nhất 
+                     - var list= ["detailblog.png","detailblog.png","detailblog.png"]
+                            each url in list
+                                .article.article--box
+                                    img.article__thumbnail.article__thumbnail--box(src="images/blog/" + url, alt="article")
+                                    .article__info
+                                        .heading-tertiary.heading-tertiary--small.pb-2.text-left cách sắp xếp nội thất trong nhà
+                                        .article__meta 
+                                            i.far.fa-calendar.pr-1 
+                                            span.article__meta--date 30/06/2015
+                    h3.heading-tertiary.heading-tertiary--small.py-2 Blog Tags
+                    .tag-list 
+                        a.tag.tag--active(href="#") Đồng hồ
+                        - var list1 =['Túi','Phụ kiện','Giày','Sandal','Áo sơ mi','Nước hoa','Trẻ em','Thời trang nữ']
+                            each item in list1
+                                a.tag(href="#")= item
+                    h3.heading-tertiary.heading-tertiary--small.py-2 Lastest Video
+                    img.d-block.w-100(src="images/blog/video.png")
+                .blog-detail__item.blog-detail__content
+                    .article.article--post
+                        img.article__thumbnail(src="images/blog/blog_1.png", alt="article")
+                        h3.article__post-title.heading-tertiary.py-4.text-left Vang Thăng Long Classic
+                        .article__meta.py-2 
+                            span.article__meta--author  Đăng bởi Giangle
+                            span.article__meta--date 30/06/2015
+                            span.article__meta--comments 60 bình luận
+
+                        .article__description.py-2
+                            | Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên
+                            | men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. 
+                            | Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, 
+                            | sản phẩm được đóng chai dung tích 750ml...
+                    h3.heading-tertiary.py-4.text-left Đóng góp ý kiến 
+                    form.py-4
+                        .form-group
+                            label(for='inputName') Name
+                                sup *
+                            input#inputName.form-control(type='text')
+                
+                        .form-group
+                            label(for='exampleInputEmail1') Email
+                                 sup *
+                            input#exampleInputEmail1.form-control(type='email', aria-describedby='emailHelp')
+                        .form-group
+                            label(for='exampleFormControlTextarea1') Ý kiến
+                                 sup *
+                            textarea#exampleFormControlTextarea1.form-control(rows='7')
+                        .form-group
+                            button.btn.btn-info(type='submit') Gửi ý kiến
+                    h3.heading-tertiary.py-2.text-left Bình luận (3)
+                    - for (var x = 0; x < 3; x++)
+                        .comment.py-4
+                            .comment__info.bg-info 
+                                i Bình luận bởi Giangle  | Cách đây 4 giờ
+                                a.comment__info__link(href="#") Trả lời 
+                            .comment__content 
+                                | Có lẽ bởi tính ăn gian vóc giáng và vô cùng thỏa mái, gợi cảm mà cả hai dạng trang phục này 
+                                | được áp dụng nhiều nhất trong street style tuần qua, chọn cho mình bộ trang phục đơn sắc với 
+                                | thiết kế cổ yếm, ống rộng - vừa thỏa ái tối đa lại không kém phàn gợi cảm, kết hợp cùng lâu giày
+                                | quai chữ T tôn dáng
+                    .d-flex.justify-content-end 
+                        a.blog-detail__page-button.blog-detail__page-button--black(href="#") <
+                        a.blog-detail__page-button.blog-detail__page-button--active(href="#") 1
+                        a.blog-detail__page-button(href="#") 2
+                        a.blog-detail__page-button(href="#") 3
+                        a.blog-detail__page-button.blog-detail__page-button--black(href="#") >
+                
+              
+    include includes/_footer.pug

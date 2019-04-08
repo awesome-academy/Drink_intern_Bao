@@ -1,6 +1,7 @@
 $theme-colors: (
     'primary': #000,
-    'secondary': #e6ae48
+    'secondary': #e6ae48,
+    'info': #e6e6e6
 );
 @import '~bootstrap/scss/bootstrap';
 
@@ -12,6 +13,25 @@ $theme-colors: (
     &:not(:last-child) {
         margin-right: 1rem;
     }
+    &-info {
+        border-radius: 0.5rem;
+    }
+}
+.form-group {
+    display: flex;
+    label {
+        font-style: italic;
+        margin-right: 2rem;
+        flex-shrink: 0;
+        flex-basis: 15%;
+        sup {
+            margin-left: 0.5rem;
+            color: var(--color-red);
+        }
+    }
+}
+.form-check-label {
+    padding-left: 1rem;
 }
 th,
 td {
@@ -20,4 +40,7 @@ td {
 }
 tbody {
     border-bottom: 1px solid #dee2e6;
+}
+table {
+    margin: 0;
 }

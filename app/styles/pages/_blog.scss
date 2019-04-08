@@ -1,0 +1,17 @@
+.blog {
+    padding-bottom: 5rem;
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1rem;
+        @include respond(tab-land) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 1fr;
+        }
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+            grid-auto-rows: 1fr;
+        }
+    }
+}

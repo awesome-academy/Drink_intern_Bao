@@ -1,0 +1,36 @@
+include includes/_head.pug
+
+body
+    header 
+        include includes/_top-menu.pug
+        +top-menu(true)
+    main
+        include includes/_navigation.pug
+        section.login
+            .container
+                .breadcrumb
+                    a.breadcrumb__link(href="index.html") 
+                        | Trang chủ
+                    a.breadcrumb__link(href="index.html") 
+                        | Đăng nhập 
+                .d-flex.justify-content-between.align-items-center 
+                    h2.heading-secondary.heading-secondary--pattern-left Đăng nhập 
+                    button.btn.btn-primary Đăng nhập
+                form.login__form.py-4
+                    h3.heading-tertiary.py-2.text-left Khách hàng đăng nhập
+                    p Nếu bạn có một tài khoảng, xin vui lòng đăng nhập 
+                    .form-group
+                        label(for='exampleInputEmail1') Email
+                                sup *
+                        input#exampleInputEmail1.form-control(type='email', aria-describedby='emailHelp')
+                    .form-group
+                        label(for='inputpassword') Password
+                            sup *
+                        input#inputName.form-control(type='password')
+                    .form-check.py-3
+                        input#exampleCheck1.form-check-input.mr-1(type='checkbox')
+                        label.form-check-label(for='exampleCheck1') Quên mật khẩu
+
+                    .form-group.py-3
+                        button.btn.btn-primary(type='submit') Đăng nhập 
+    include includes/_footer.pug

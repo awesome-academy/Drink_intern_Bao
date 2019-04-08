@@ -1,0 +1,53 @@
+include includes/_head.pug
+
+body
+    header 
+        include includes/_top-menu.pug
+        +top-menu(true)
+    main
+        include includes/_navigation.pug
+        section.register
+            .container
+                .breadcrumb
+                    a.breadcrumb__link(href="index.html") 
+                        | Trang chủ
+                    a.breadcrumb__link(href="index.html") 
+                        | Đăng ký 
+                .d-flex.justify-content-between.align-items-center 
+                    h2.heading-secondary.heading-secondary--pattern-left Đăng ký  
+                    button.btn.btn-primary Đăng ký 
+                form.register__form.py-4
+                    h3.heading-tertiary.py-2.text-left Thông tin cá nhân
+                    .form-group
+                        label(for='inputFirstName') Tên trước
+                            sup *
+                        input#inputFirstName.form-control(type='text')
+                    .form-group
+                        label(for='inputLastName') Tên sau
+                            sup *
+                        input#inputLastName.form-control(type='text')
+                    .form-group
+                        label(for='exampleInputEmail1') Email
+                                sup *
+                        input#exampleInputEmail1.form-control(type='email', aria-describedby='emailHelp')
+                    .form-group
+                        label(for='inputpassword') Password
+                            sup *
+                        input#inputName.form-control(type='password')
+                    .form-check.py-3
+                        input#exampleCheck1.form-check-input.mr-1(type='checkbox')
+                        label.form-check-label(for='exampleCheck1') Đăng ký nhận bản tin 
+
+                    h3.heading-tertiary.py-2.text-left Thông tin đăng nhập
+                    .form-group
+                        label(for='inputmk') Mật khẩu
+                            sup *
+                        input#inputmk.form-control(type='password')
+                    .form-group
+                        label(for='inputxacnhanmk') Xác nhận mật khẩu
+                            sup *
+                        input#inputxacnhanmk.form-control(type='password')
+                    .d-flex.justify-content-end.align-items-center
+                        button.btn.btn-primary(type='submit') Gửi  
+                        button.btn.btn-primary(type='submit') Quay lại 
+    include includes/_footer.pug

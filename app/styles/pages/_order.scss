@@ -1,0 +1,9 @@
+.order {
+    &__table {
+        margin-bottom: 0;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+}

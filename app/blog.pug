@@ -1,0 +1,35 @@
+include includes/_head.pug
+
+body
+    header 
+        include includes/_top-menu.pug
+        +top-menu(true)
+    main
+        include includes/_navigation.pug
+        section.blog
+            .container
+                .breadcrumb
+                    a.breadcrumb__link(href="index.html") 
+                        | Trang chủ
+                    a.breadcrumb__link.breadcrumb__link--active(href="index.html") 
+                        | Blog
+                h2.heading-secondary.heading-secondary--pattern-left Blog
+                .blog__list
+                    - for (var x = 0; x < 9; x++) 
+                        .article
+                            img.article__thumbnail(src="images/blog/blog_1.png", alt="article")
+                            .heading-tertiary.py-2.text-left Vang Thăng Long Classic
+                            .article__meta 
+                                span.article__meta--author  Đăng bởi Giangle
+                                span.article__meta--date 30/06/2015
+                                span.article__meta--comments 60 bình luận
+
+                            .article__description.py-2
+                                | Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên
+                                | men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. 
+                                | Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, 
+                                | sản phẩm được đóng chai dung tích 750ml...
+                            a.h-read-more-link(href="#") Read more
+
+                    
+    include includes/_footer.pug
