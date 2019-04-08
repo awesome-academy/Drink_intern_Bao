@@ -13,7 +13,6 @@ const lintStylesOptions = {
     context: path.resolve(__dirname, `${paths.app}/styles`),
     syntax: 'scss',
     emitErrors: false
-    // fix: true,
 };
 const cssPreprocessorLoader = { loader: 'fast-sass-loader' };
 
@@ -35,12 +34,7 @@ const commonConfig = merge([
             children: false,
             modules: false
         },
-        plugins: [
-            // new HtmlPlugin({
-            //     template: './index.pug'
-            // }),
-            new StylelintPlugin(lintStylesOptions)
-        ],
+        plugins: [new StylelintPlugin(lintStylesOptions)],
         module: {
             noParse: /\.min\.js/
         }
@@ -72,6 +66,39 @@ const pages = [
             home: paths.app + '/scripts/index.js'
         },
         template: path.join(paths.app, 'detail.pug'),
+
+        // An array of chunks to include in the page
+        chunks: ['home', 'runtime', 'vendors']
+    }),
+    parts.page({
+        title: 'Product List',
+        path: 'product-list',
+        entry: {
+            home: paths.app + '/scripts/index.js'
+        },
+        template: path.join(paths.app, 'product-list.pug'),
+
+        // An array of chunks to include in the page
+        chunks: ['home', 'runtime', 'vendors']
+    }),
+    parts.page({
+        title: 'Product List',
+        path: 'product-list-default',
+        entry: {
+            home: paths.app + '/scripts/index.js'
+        },
+        template: path.join(paths.app, 'product-list-default.pug'),
+
+        // An array of chunks to include in the page
+        chunks: ['home', 'runtime', 'vendors']
+    }),
+    parts.page({
+        title: 'Cart',
+        path: 'cart',
+        entry: {
+            home: paths.app + '/scripts/index.js'
+        },
+        template: path.join(paths.app, 'cart.pug'),
 
         // An array of chunks to include in the page
         chunks: ['home', 'runtime', 'vendors']
