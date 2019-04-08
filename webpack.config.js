@@ -66,14 +66,15 @@ const pages = [
         chunks: ['home', 'runtime', 'vendors']
     }),
     parts.page({
-        title: 'About',
-        path: 'about',
+        title: 'Detail',
+        path: 'detail',
         entry: {
-            about: path.join(paths.app, 'pages/about/index.js')
+            home: paths.app + '/scripts/index.js'
         },
-        template: path.join(paths.app, 'pages/about/about.pug'),
+        template: path.join(paths.app, 'detail.pug'),
 
-        chunks: ['about', 'runtime', 'vendors']
+        // An array of chunks to include in the page
+        chunks: ['home', 'runtime', 'vendors']
     })
 ];
 

@@ -1,0 +1,82 @@
+/*------------------------------------*/
+/* Detail product image Section */
+/*------------------------------------*/
+
+.detail-images {
+    border: 1px solid var(--color-grey-light-1);
+    height: 100%;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 100%;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        border: 0;
+        transition: 0.2s all;
+        &:hover {
+            border: 1px solid var(--color-highlight);
+        }
+    }
+    &__image-box {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__image {
+        width: 60%;
+        border-bottom: 1px solid var(--color-grey-light-1);
+    }
+    &__main-image {
+        width: 100%;
+        padding: 2rem;
+    }
+}
+/*------------------------------------*/
+/* Product Info Section */
+/*------------------------------------*/
+.product-info {
+    font-size: 1.3rem;
+    &__tab {
+    }
+    &__link {
+        text-transform: uppercase;
+        color: var(--color-black);
+        padding: 0.5rem 1rem;
+
+        &--active {
+            color: var(--color-white);
+            background-color: var(--color-highlight);
+        }
+    }
+    &__text {
+        padding: 1rem 0;
+        color: var(--color-grey-dark-1);
+    }
+    &__image-box {
+        position: relative;
+    }
+    &__image {
+        width: 100%;
+    }
+    &__image-text {
+        @include absCenter;
+        text-transform: uppercase;
+        font-size: 3rem;
+        color: var(--color-white);
+        font-family: var(--heading-sub-font);
+    }
+}
+/*------------------------------------*/
+/* Related products Section */
+/*------------------------------------*/
+
+.related-products {
+    padding: 5rem 15rem;
+}

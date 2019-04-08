@@ -4,6 +4,12 @@
     z-index: 9999;
     background-color: var(--color-primary-alpha);
     padding: 1rem 0;
+    color: var(--color-white);
+    &--white {
+        position: static;
+        background-color: var(--color-white);
+        color: var(--color-black);
+    }
     &__brand {
         font-family: var(--brand-font);
         font-size: 2.5rem;
@@ -54,7 +60,7 @@
         &__link {
             font-size: 1.2rem;
             text-decoration: none;
-            color: var(--color-white);
+            color: inherit;
             transition: all 0.2s;
             border-bottom: none;
             &:hover {
@@ -70,22 +76,23 @@
         align-items: center;
         &::before {
             content: '|';
-            color: var(--color-white);
+            color: inherit;
             margin-right: 1rem;
         }
         &__input {
-            color: var(--color-white);
+            color: inherit;
             font-size: 1.2rem;
             border: none;
             background: transparent;
             outline: none;
         }
         &__input::-webkit-input-placeholder {
-            color: var(--color-white-alpha);
+            color: inherit;
         }
 
         &__icon {
             font-size: 1.2rem;
+            color: inherit !important;
         }
     }
 }
