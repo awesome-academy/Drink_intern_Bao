@@ -1,7 +1,8 @@
 $theme-colors: (
     'primary': #000,
     'secondary': #e6ae48,
-    'info': #e6e6e6
+    'info': #e6e6e6,
+    'success': #21c3d6
 );
 @import '~bootstrap/scss/bootstrap';
 
@@ -23,7 +24,7 @@ $theme-colors: (
         font-style: italic;
         margin-right: 2rem;
         flex-shrink: 0;
-        flex-basis: 15%;
+        flex-basis: 10rem;
         sup {
             margin-left: 0.5rem;
             color: var(--color-red);
@@ -32,6 +33,25 @@ $theme-colors: (
 }
 .form-check-label {
     padding-left: 1rem;
+}
+.modal {
+    margin-top: 5rem;
+}
+.modal-header {
+    background: transparent;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.modal-body {
+    padding: 0;
+}
+.close {
+    font-size: 4rem;
+    color: #fff;
+    opacity: 0.8;
+}
+.modal-content {
+    border-radius: 0;
 }
 th,
 td {

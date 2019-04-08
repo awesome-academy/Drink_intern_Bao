@@ -1,0 +1,93 @@
+include includes/_head.pug
+
+body
+    header 
+        include includes/_top-menu.pug
+        +top-menu(true)
+    main
+        include includes/_navigation.pug
+        section.address
+            .container
+                .breadcrumb
+                    a.breadcrumb__link(href="index.html") 
+                        | Trang chủ
+                    a.breadcrumb__link(href="index.html") 
+                        | Địa chỉ
+                
+                h2.heading-secondary.heading-secondary--pattern-left.d-block Địa chỉ
+                .d-flex.justify-content-between
+                    h3.heading-tertiary.py-2.text-left Danh sách đơn hàng 
+                    a.address__link(href="#") Thêm địa chỉ 
+                .row.mb-5
+                    - for (var x = 0; x < 2; x++)
+                        .col-lg-6 
+                            form.address__form 
+                                .form-group
+                                    label(for='inputName') Tên 
+                                    input#inputName.form-control(type='text')
+                                .form-group
+                                    label(for='inputFirstName') Họ và tên đệm
+                                    input#inputFirstName.form-control(type='text')
+                                .form-group
+                                    label(for='inputCompany') Công ty
+                                    input#inputCompany.form-control(type='text')
+                                .form-group
+                                    label(for='inputAddress') Địa chỉ
+                                    input#inputAddress.form-control(type='text')
+                                .form-group
+                                    label(for='inputCity') Thành phố
+                                    input#inputCity.form-control(type='text')
+                                .form-group
+                                    label(for='inputNationality') Quốc tịch
+                                    input#inputNationality.form-control(type='text')
+                                .form-group
+                                    label(for='inputZipcode') Postal/Zip Code
+                                    input#inputZipcode.form-control(type='text')
+                                .form-group
+                                    label(for='inputPhone') Phone
+                                    input#inputPhone.form-control(type='text')
+                                .form-check.py-3
+                                    label
+                                    input#exampleCheck1.form-check-input.mr-1(type='checkbox')
+                                    label.form-check-label(for='exampleCheck1') Đặt làm địa chỉ mặc định ?                   
+                                .form-group 
+                                    label
+                                    button.btn.btn-success Chỉnh sửa địa chỉ
+                                    button.btn.btn-primary Xoá  
+                                   
+                               
+
+                                
+                                 
+                - for (var x = 0; x < 2; x++)
+                    .row.mb-5
+                        .col-lg-6 
+                            form.address__info 
+                                .form-group
+                                    label(for='inputName') Tên 
+                                    span  Giang
+                                .form-group
+                                    label(for='inputFirstName') Họ và tên đệm
+                                    span  Lê Anh
+                                .form-group
+                                    label(for='inputCompany') Công ty
+                                    span Cổ phần công nghệ DKT
+                                .form-group
+                                    label(for='inputAddress') Địa chỉ
+                                    span Toà Nhà Hà Nội Group, 442 Đội cấn , Ba đình, Hà Nội
+                                .form-group
+                                    label(for='inputCity') Thành phố
+                                    span Hà Nội
+                                .form-group
+                                    label(for='inputNationality') Quốc tịch
+                                    span Việt Nam
+                                .form-group
+                                    label(for='inputZipcode') Postal/Zip Code
+                                    span 2000089
+                                .form-group
+                                    label(for='inputPhone') Phone
+                                    span 0974554928
+                                .d-flex.justify-content-end 
+                                    a.address__link(href='#') Chỉnh sửa địa chỉ 
+                    
+    include includes/_footer.pug

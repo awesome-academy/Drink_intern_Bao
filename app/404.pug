@@ -1,0 +1,27 @@
+include includes/_head.pug
+body 
+    section.page-404 
+        img.page-404__big-image.d-inline-block(src="images/thumbnail-404.png")
+        .page-404__background 
+            .container.d-flex.justify-content-end.bg-transparent  
+                img.page-404__image.d-block.h-100(src="images/404.png")
+            .page-404__overlay 
+                h1.page-404__heading
+                    span.page-404__heading--main Lỗi
+                    .d-inline-block.align-self-end
+                        span.page-404__heading--sub Đây không phải là 
+                        span.page-404__heading--under trang web bạn tìm kiếm 
+        .page-404__menu.container
+             
+            .page-404__logo
+                img.d-block.w-100(src="images/logo_black.png",alt="wine house")
+            .page-404__menu-item 
+                a.page-404__menu-link(href="#") Trang chủ 
+            .page-404__menu-item 
+                a.page-404__menu-link(href="#") Liên hệ 
+            .page-404__menu-item
+                .page-404__search-box 
+                    .fas.fa-search.page-404__icon 
+                    input.page-404__search-input(type='text', name='search')
+
+            

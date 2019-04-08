@@ -1,0 +1,22 @@
+.modal#popup(tabindex='-1', role='dialog')
+    .modal-header
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+    .modal-dialog(role='document')
+        .modal-content.popup
+           
+            .modal-body
+                .container.d-flex 
+                    .popup__image
+                        img.d-block.w-100.d-100(src="images/thumbnail-404.png")
+                    .popup__content 
+                        h5.popup__title Gửi mail 
+                        p.popup__description Đăng ký email ngay hôm nay để nhận được thông tin về sự kiện, các chương trình giảm giá của chúng tôi sớm nhất!
+                        .popup__email-box 
+                            input.popup__input(type='text', name='email',placeholder="Email của bạn ...")
+                            button.btn.btn-warning.popup__button 
+                                | Gửi mail 
+                        .form-check.py-1
+                            input#exampleCheck1.form-check-input.mr-1(type='checkbox')
+                            label.form-check-label.popup__check-label(for='exampleCheck1') Không hiển thị lại thông báo này 
+
