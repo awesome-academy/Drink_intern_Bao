@@ -1,5 +1,5 @@
 .popup {
-    padding: 3rem 5rem;
+    padding: 3rem 0;
     &__image {
         flex: 0 1 38%;
     }
@@ -24,13 +24,19 @@
     }
     &__input::-webkit-input-placeholder {
         font-size: 1.3rem;
+        padding-left: 1rem;
     }
     &__button {
+        width: 35%;
+
         font-size: 1.3rem;
         color: var(--color-white);
+        @include respond(big-desktop) {
+            width: 45%;
+            font-size: 1.1rem;
+        }
     }
-    &__check-label {
-        display: block;
+    &__check-control {
         width: 100%;
         font-size: 1.3rem;
         color: var(--color-grey-dark-1);

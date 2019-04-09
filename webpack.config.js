@@ -224,12 +224,13 @@ const productionConfig = merge([
         },
         plugins: [new webpack.HashedModuleIdsPlugin(), new ManifestPlugin()]
     },
-    // parts.loadJS({
-    // 	include: paths.app,
-    // 	options: {
-    // 		cacheDirectory: true
-    // 	}
-    // }),
+    parts.loadJS({
+        include: paths.app,
+        options: {
+            cacheDirectory: true
+        }
+    }),
+
     parts.extractCSS({
         include: paths.app,
         use: [parts.autoprefix(), cssPreprocessorLoader],
@@ -249,7 +250,7 @@ const productionConfig = merge([
     parts.loadImages({
         include: paths.app,
         options: {
-            limit: 15000,
+            // limit: 15000,
             name: `${paths.images}/[name].[hash:8].[ext]`
         }
     }),
@@ -265,8 +266,8 @@ const developmentConfig = merge([
         port: process.env.PORT
     }),
     parts.loadCSS({ include: paths.app, use: [cssPreprocessorLoader] }),
-    parts.loadImages({ include: paths.app })
-    // parts.loadJS({ include: paths.app })
+    parts.loadImages({ include: paths.app }),
+    parts.loadJS({ include: paths.app })
 ]);
 
 module.exports = env => {

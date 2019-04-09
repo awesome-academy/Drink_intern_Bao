@@ -6,6 +6,88 @@
         margin: 0 auto;
         padding: 2rem;
     }
+
+    &__thumbnail-box {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            left: 0;
+            top: 0;
+            height: 2px;
+            background-color: var(--color-highlight);
+            transition: all 0.5s ease-in-out;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            width: 0%;
+            left: 0;
+            top: 100%;
+            height: 2px;
+            background-color: var(--color-highlight);
+            transition: all 0.5s ease-in-out;
+        }
+    }
+    &__thumbnail {
+        width: 100%;
+
+        &--box {
+            width: 7rem;
+            height: 5rem;
+        }
+    }
+    &__overload {
+        width: 100%;
+        height: 100%;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            left: 0;
+            top: 0;
+            height: 0%;
+            background-color: var(--color-highlight);
+            transition: all 0.5s ease-in-out;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            left: 100%;
+            top: 0%;
+            height: 0%;
+            background-color: var(--color-highlight);
+            transition: all 0.5s ease-in-out;
+        }
+    }
+    &__hover {
+        position: absolute;
+        background-image: url('../../images/bloghover_mo.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 20rem;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        visibility: hidden;
+        margin: 1rem;
+        transition: all 0.3s ease-in-out;
+    }
+    &__icon-box {
+        @include absCenter;
+        width: 5rem;
+        height: 5rem;
+
+        background-color: var(--color-white);
+        border-radius: 100%;
+    }
+    &__icon {
+        @include absCenter;
+    }
     &--post {
         font-size: 1.2rem;
         @include respond(tab-port) {
@@ -27,14 +109,7 @@
         flex: 1 1 70%;
         padding: 0 1rem;
     }
-    &__thumbnail {
-        width: 100%;
 
-        &--box {
-            width: 7rem;
-            height: 5rem;
-        }
-    }
     &__meta {
         font-size: 1.2em;
         @include respond(tab-port) {
@@ -57,5 +132,31 @@
             font-size: 1.8em;
         }
         color: var(--color-grey-dark-2);
+    }
+    //FUNCTIONALITIES
+    &--hover-effect {
+        &:hover {
+            .article__thumbnail-box {
+                &::after {
+                    width: 100%;
+                }
+                &::before {
+                    width: 100%;
+                }
+            }
+            .article__overload {
+                &::after {
+                    height: 100%;
+                }
+                &::before {
+                    height: 100%;
+                }
+            }
+            .article__hover {
+                visibility: visible;
+                opacity: 1;
+                margin: 0;
+            }
+        }
     }
 }
