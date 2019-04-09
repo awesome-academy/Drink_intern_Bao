@@ -2,7 +2,6 @@ const webpack = require('webpack');
 const path = require('path');
 
 const merge = require('webpack-merge');
-const HtmlPlugin = require('html-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const parts = require('./webpack.parts');
@@ -99,6 +98,84 @@ const pages = [
             home: paths.app + '/scripts/index.js'
         },
         template: path.join(paths.app, 'cart.pug'),
+
+        // An array of chunks to include in the page
+        chunks: ['home', 'runtime', 'vendors']
+    }),
+    parts.page({
+        title: 'About',
+        path: 'about',
+        entry: {
+            home: paths.app + '/scripts/index.js'
+        },
+        template: path.join(paths.app, 'about.pug'),
+
+        // An array of chunks to include in the page
+        chunks: ['home', 'runtime', 'vendors']
+    }),
+    parts.page({
+        title: 'Blog',
+        path: 'blog',
+        entry: {
+            home: paths.app + '/scripts/index.js'
+        },
+        template: path.join(paths.app, 'blog.pug'),
+
+        // An array of chunks to include in the page
+        chunks: ['home', 'runtime', 'vendors']
+    }),
+    parts.page({
+        title: 'Blog Detail',
+        path: 'blog-detail',
+        entry: {
+            home: paths.app + '/scripts/index.js'
+        },
+        template: path.join(paths.app, 'blog-detail.pug'),
+
+        // An array of chunks to include in the page
+        chunks: ['home', 'runtime', 'vendors']
+    }),
+    parts.page({
+        title: 'Login',
+        path: 'login',
+        entry: {
+            home: paths.app + '/scripts/index.js'
+        },
+        template: path.join(paths.app, 'login.pug'),
+
+        // An array of chunks to include in the page
+        chunks: ['home', 'runtime', 'vendors']
+    }),
+
+    parts.page({
+        title: 'Register',
+        path: 'register',
+        entry: {
+            home: paths.app + '/scripts/index.js'
+        },
+        template: path.join(paths.app, 'register.pug'),
+
+        // An array of chunks to include in the page
+        chunks: ['home', 'runtime', 'vendors']
+    }),
+    parts.page({
+        title: 'Order',
+        path: 'order',
+        entry: {
+            home: paths.app + '/scripts/index.js'
+        },
+        template: path.join(paths.app, 'order.pug'),
+
+        // An array of chunks to include in the page
+        chunks: ['home', 'runtime', 'vendors']
+    }),
+    parts.page({
+        title: 'Contact',
+        path: 'contact',
+        entry: {
+            home: paths.app + '/scripts/index.js'
+        },
+        template: path.join(paths.app, 'contact.pug'),
 
         // An array of chunks to include in the page
         chunks: ['home', 'runtime', 'vendors']

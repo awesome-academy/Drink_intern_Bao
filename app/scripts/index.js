@@ -9,6 +9,13 @@ if (process.env.NODE_ENV !== 'production') {
     require('../product-list.pug');
     require('../product-list-default.pug');
     require('../cart.pug');
+    require('../about.pug');
+    require('../blog.pug');
+    require('../blog-detail.pug');
+    require('../login.pug');
+    require('../register.pug');
+    require('../order.pug');
+    require('../contact.pug');
 }
 
 // Toogle Top-Menu

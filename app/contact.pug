@@ -1,0 +1,72 @@
+include includes/_head.pug
+
+body
+    header 
+        include includes/_top-menu.pug
+        +top-menu(true)
+    main
+        include includes/_navigation.pug
+        section.contact
+            .container
+                .breadcrumb
+                    a.breadcrumb__link(href="index.html") 
+                        | Trang chủ
+                    a.breadcrumb__link(href="index.html") 
+                        | Liên hệ
+                .d-flex.justify-content-between.align-items-center 
+                    h2.heading-secondary.heading-secondary--pattern-left Liên hệ
+                .row
+                    .col-md-8
+                        .contact__map
+                            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d667.2830072993363!2d105.8090406967228!3d21.03948459568106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab1461382fdb%3A0xa6dddaacdfb96871!2zQ8O0bmcgdHkgQ-G7lSBwaOG6p24gQ8O0bmcgbmdo4buHIERLVA!5e0!3m2!1svi!2s!4v1550915945316"
+                            frameborder="0" style="border:0" allowfullscreen)
+                    .col-md-4
+                        .contact__logo
+                            img.d-block.w-100(src="images/logo.png",alt="wine house")
+                        .meta 
+                            i.meta__icon.fas.fa-map-marker-alt
+                            | Tầng 4, Tòa nhà Hanoi Group  Số 442 Đội Cấn, P. Cống Vị, Q. Ba Đình, Hà Nội
+                        .meta
+                            i.meta__icon.fas.fa-phone-volume
+                            | (04) 6674 2332
+                        .meta
+                            i.meta__icon.fas.fa-envelope
+                            a.meta__link(href='#') support@milano.com
+                        .meta 
+                            h3.heading-tertiary.pt-4.text-left Follow US
+                        .meta 
+                            a.meta__link(href='#')
+                                i.meta__icon.fas.fa-dove
+                            a.meta__link(href='#')
+                                i.meta__icon.fab.fa-google-plus-g
+                            a.meta__link(href='#')
+                                i.meta__icon.fas.fa-volleyball-ball
+                            a.meta__link(href='#')
+                                i.meta__icon.fab.fa-invision
+                            a.meta__link(href='#')
+                                i.meta__icon.fas.fa-wifi   
+                .row
+                    .col-lg-8
+                        form.contact__form.py-5
+                            .form-group
+                                label(for='inputName') Your Name
+    
+                                input#inputName.form-control(type='text')
+                
+                            .form-group
+                                label(for='exampleInputEmail1') Your Email
+    
+                                input#exampleInputEmail1.form-control(type='email', aria-describedby='emailHelp')
+                            .form-group
+                                label(for='inputSubject') Subject
+    
+                                input#inputSubject.form-control(type='text')
+                
+                            .form-group
+                                label(for='exampleFormControlTextarea1') Your message
+    
+                                textarea#exampleFormControlTextarea1.form-control(rows='7')
+                            .form-group
+                                button.btn.btn-primary(type='submit') Gửi
+                   
+    include includes/_footer.pug

@@ -1,0 +1,32 @@
+include includes/_head.pug
+
+body
+    header 
+        include includes/_top-menu.pug
+        +top-menu(true)
+    main
+        include includes/_navigation.pug
+        section.about
+            .container
+                .breadcrumb
+                    a.breadcrumb__link(href="index.html") 
+                        | Trang chủ
+                    a.breadcrumb__link.breadcrumb__link--active(href="index.html") 
+                        | Giới thiệu
+                h2.heading-secondary.heading-secondary--pattern-left Giới thiệu
+                .row
+                    .col-md-5
+                        img.d-block.w-100(src="images/hotdeal-background.jpg") 
+                    .col-md-7
+                        h3.heading-tertiary Chào mừng đến với wine hourse
+                        .about__description 
+                            | Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                            | rượu nhẹ, bột ga đầy trắng mịn.Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                            | rượu nhẹ, bột ga đầy trắng mịn. Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                            | rượu nhẹ, bột ga đầy trắng mịn.Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                            | rượu nhẹ, bột ga đầy trắng mịn.
+                            br
+                            | Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                            | rượu nhẹ, bột ga đầy trắng mịn.Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                            | rượu nhẹ, bột ga đầy trắng mịn.
+    include includes/_footer.pug

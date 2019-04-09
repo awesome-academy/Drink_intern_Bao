@@ -1,0 +1,62 @@
+include includes/_head.pug
+
+body
+    header 
+        include includes/_top-menu.pug
+        +top-menu(true)
+    main
+        include includes/_navigation.pug
+        section.order
+            .container
+                .breadcrumb
+                    a.breadcrumb__link(href="index.html") 
+                        | Trang chủ
+                    a.breadcrumb__link(href="index.html") 
+                        | Danh sách đơn hàng 
+                .d-flex.justify-content-between.align-items-center 
+                    h2.heading-secondary.heading-secondary--pattern-left Đơn hàng
+                .row.mb-5
+                    .col-md-9.bg-info.pt-5.px-0
+                        .px-3
+                            h3.heading-tertiary.py-2.text-left Danh sách đơn hàng 
+                            p Trạng thái tất cả(16) | Đã hủy(10) | Chưa duyệt(0) | Đã duyệt(0) | Đã thanh toán-chờ mua hàng(0) | Đã mua hàng(0) | Hàng đã về-chờ giao hàng(0) | Đã kết thúc(6)
+
+                        table.table.order__table.bg-white
+                          
+                            thead
+                                tr
+                                    - var list=['stt','mã hóa đơn hàng mua hàng','kho ngân hàng','số sp','tổng tiền','tình trạng','thao tác']
+                                    each item in list
+                                        th(scope='col')
+                                            h3.heading-tertiary= item
+                                  
+                            tbody
+                                - for (var x = 0; x < 6; x++)
+                                    tr
+                                        td= x
+                                        td
+                                            p leanhgiang89 - 17/06/2015
+                                            span 01:36 14/03/2015 
+                                        - var list1=['Hà Đông','7','350.00đ','Đã thanh toán','Chi tiết']
+                                        each val in list1
+                                            td= val
+                                          
+                    .col-md-3
+                        .order__info.bg-info
+                            h3.heading-tertiary.pt-5.px-5.text-left  thông tin khách hàng
+                            .meta 
+                                i.meta__icon.fas.fa-user-alt 
+                                | GiangLe
+                            .meta 
+                                i.meta__icon.fas.fa-map-marker-alt
+                                | Tầng 4,Tòa nhà HaNoi Group Số 442 Đội Cần, P.Cộng Vị, Quận Ba ĐÌnh, Hà Nội.
+        
+                            ._meta
+                                i.meta__icon.fas.fa-phone-volume   
+                                | (08) 6608 9686  
+                            
+                            ._meta
+                                a(href="#") Chi tiết đơn hàng
+              
+                   
+    include includes/_footer.pug

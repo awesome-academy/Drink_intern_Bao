@@ -17,8 +17,10 @@
     }
     &__side-bar {
         grid-area: left;
+
         @include respond(tab-port) {
             grid-area: auto;
+            grid-row: 2 / 2;
         }
         &__image {
             display: block;
@@ -31,8 +33,10 @@
     }
     &__content {
         grid-area: center;
+
         @include respond(tab-port) {
             grid-area: auto;
+            grid-row: 1 / 2;
         }
     }
     &__menu {

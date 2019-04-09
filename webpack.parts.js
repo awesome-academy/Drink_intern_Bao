@@ -197,22 +197,6 @@ exports.loadFonts = ({ include, exclude, options } = {}) => ({
     }
 });
 
-// exports.loadJS = ({ include, exclude, options } = {}) => ({
-// 	module: {
-// 		rules: [
-// 			{
-// 				test: /\.js$/,
-
-// 				include,
-// 				exclude,
-
-// 				loader: 'babel-loader',
-// 				options
-// 			}
-// 		]
-// 	}
-// });
-
 exports.page = ({
     path = '',
     template = require.resolve('html-webpack-plugin/default_index.ejs'),
