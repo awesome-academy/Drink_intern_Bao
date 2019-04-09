@@ -179,6 +179,28 @@ const pages = [
 
         // An array of chunks to include in the page
         chunks: ['home', 'runtime', 'vendors']
+    }),
+    parts.page({
+        title: '404',
+        path: '404',
+        entry: {
+            home: paths.app + '/scripts/index.js'
+        },
+        template: path.join(paths.app, '404.pug'),
+
+        // An array of chunks to include in the page
+        chunks: ['home', 'runtime', 'vendors']
+    }),
+    parts.page({
+        title: 'Customer Address',
+        path: 'customer-address',
+        entry: {
+            home: paths.app + '/scripts/index.js'
+        },
+        template: path.join(paths.app, 'customer-address.pug'),
+
+        // An array of chunks to include in the page
+        chunks: ['home', 'runtime', 'vendors']
     })
 ];
 

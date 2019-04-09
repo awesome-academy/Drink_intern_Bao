@@ -1,6 +1,6 @@
 import '../styles/main.scss';
 import 'bootstrap';
-
+import $ from 'jquery';
 import '@fortawesome/fontawesome-free/js/all';
 
 if (process.env.NODE_ENV !== 'production') {
@@ -16,6 +16,8 @@ if (process.env.NODE_ENV !== 'production') {
     require('../register.pug');
     require('../order.pug');
     require('../contact.pug');
+    require('../404.pug');
+    require('../customer-address.pug');
 }
 
 // Toogle Top-Menu
@@ -27,3 +29,7 @@ function classToggle() {
 document
     .querySelector('.top-menu__toggle')
     .addEventListener('click', classToggle);
+
+$(document).ready(function() {
+    $('#popup').modal('show');
+});
