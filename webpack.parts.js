@@ -2,7 +2,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const publicPath = '/';
+const publicPath = '';
 
 exports.publicPath = publicPath;
 
@@ -152,20 +152,9 @@ exports.optimizeImages = ({ include, exclude } = {}) => ({
                     options: {
                         progressive: true,
 
-                        // optimizationLevel: 7,
-
                         gifsicle: {
                             interlaced: false
                         },
-
-                        /*
-            mozjpeg: {
-
-            },
-
-            svgo: {
-
-            }, */
 
                         pngquant: {
                             quality: '65-90',
@@ -197,6 +186,22 @@ exports.loadFonts = ({ include, exclude, options } = {}) => ({
     }
 });
 
+exports.loadJS = ({ include, exclude, options } = {}) => ({
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+
+                include,
+                exclude,
+
+                loader: 'babel-loader',
+                options
+            }
+        ]
+    }
+});
+
 exports.page = ({
     path = '',
     template = require.resolve('html-webpack-plugin/default_index.ejs'),
@@ -207,7 +212,7 @@ exports.page = ({
     entry,
     plugins: [
         new HtmlWebpackPlugin({
-            filename: `${path && path + '/'}index.html`,
+            filename: `${path ? path : 'index'}.html`,
             template,
             title,
             chunks

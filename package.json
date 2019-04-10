@@ -19,7 +19,11 @@
     },
     "homepage": "https://github.com/methebao/Drink_intern_Bao#readme",
     "devDependencies": {
+        "@babel/core": "^7.4.3",
+        "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+        "@babel/preset-env": "^7.4.3",
         "autoprefixer": "^9.5.0",
+        "babel-loader": "^8.0.5",
         "cross-env": "^5.2.0",
         "css-loader": "^2.1.1",
         "fast-sass-loader": "^1.4.7",
